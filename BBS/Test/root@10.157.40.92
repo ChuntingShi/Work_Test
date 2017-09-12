@@ -1,0 +1,16 @@
+#!/use/bin/env python
+#auth:chunting
+#date:2017-09-04
+import socket
+if __name__=='__main__'：
+    prot=3389
+    s=socket.socket()
+    for cnt in range(253,2,-1):
+        address='XXX.XXX.XXX.'+str(cnt)
+        try:
+            s.connect((address,prot))
+            print address
+        except socket.error,e:
+            print 'Error OR Port Not Opened'
+
+
